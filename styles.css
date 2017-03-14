@@ -7,7 +7,15 @@
 
 img {
   max-width: 100%;
-  max-height: auto;
+  max-height: 100%;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #hero {
@@ -30,8 +38,33 @@ main {
 }
 
 .band {
-  width: 100%;
+  width: 80%;
+  height: 200px;
+  margin: 5% auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  position: relative;
+}
+
+.info {
+  display: none;
+}
+
+.band:hover .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  background: rgba(125,125,125,0.7);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 /* Modal */

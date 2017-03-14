@@ -61,9 +61,11 @@ $(function(){
         for (i = 0; i < count; i++) {
           console.log(count);
           $('.lineup').append("<div id='" + i + "' class='band'>"
-          + "<img src='img/" + this.bands[i].img + "' />"
-          + "<h1>" + this.bands[i].name + "</h1>"
-          + "<p>" + this.bands[i].genre + "</p>"
+          + "<div class='logo'><img src='img/" + this.bands[i].img + "' /></div>"
+          + "<div class='info'>"
+          + "<h1 class='band-name'>" + this.bands[i].name + "</h1>"
+          + "<p class='band-genre'>" + this.bands[i].genre + "</p>"
+          + "</div>"
           + "</div>");
         }
 

@@ -76,9 +76,12 @@ $(function(){
         $btn.on('click', function() {
           var id = $(this).attr('id');
           $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
-          console.log('ID = ' + id);
+          //console.log('ID = ' + id);
           $('#modal-name').text(App.bands[id].name);
           $('#modal-genre').text(App.bands[id].genre);
+          $('#modal-fb').attr('href', App.bands[id].fb);
+          $('#modal-music').attr('href', App.bands[id].music);
+          $('#modal-bio').html(App.bands[id].bio);
           $modal.slideToggle();
         });
 
@@ -109,9 +112,14 @@ $(function(){
           "name": "King Leviathan",
           "genre": "Blackened Thrash Metal",
           "img": "kl-logo.png",
-          "bio": "Test Bio",
-          "music": "//countlessskies.com",
-          "fb": "//facebook.com/countlessskies",
+          "bio": ["<p>King Leviathan are a four piece Blackened Thrash band from Brighton.</p><br>",
+                  "<p>Devout worshipers of Speed, Violence and The Occult, King Leviathan have spread their psalms from their inception, and in only a few years of existence the cult has spread across the country.</p><br>",
+                  "<p>Since the cults formation 2014, their Black Masses in dedication to the Old Gods have been performed at Mammothfest 2014, 2015 and 2016, the New Blood Stage at Bloodstock 2015, Thrashersaurus Norwich 2016, Frankfest 2016 and The Night Before Uprising 2016 supporting Venom Inc., Onslaught, Savage Messiah, Mask Of Judas, Ingested, One Machine, Reign Of Fury, Martyr Defiled and Cambion as well as tours across the UK supporting Spartan, Abhorrent Decimation, Wretched Soul, Oakhaart, Meta-Stasis, Vulgate and Stone Circle.</p><br>",
+                  "<p>As the cult begins to enter their third year, the hands of the Old Gods weave the final preparations for King Leviathan's debut album release in 2017 - the follow up to 'The Shrine' and their Self-Titled EP – and the stars begin to wither, as the darkness begins to grow.</p><br>",
+                  "<p>Will you join us in worship?</p><br>",
+                  "<p>Worship The Old Gods.</p>"].join(''),
+          "music": "//youtube.com/watch?v=d362QGl7zcc",
+          "fb": "//facebook.com/KingLeviathanMetal",
           "photo": "kl-promo.jpg"
         },
         "2": {
@@ -119,9 +127,9 @@ $(function(){
           "name": "Isarnos",
           "genre": "Folk Metal",
           "img": "is-logo.png",
-          "bio": "Test Bio",
-          "music": "//countlessskies.com",
-          "fb": "//facebook.com/countlessskies",
+          "bio": "Isarnos Bio",
+          "music": "#",
+          "fb": "//facebook.com/Isarnos",
           "photo": "is-promo.jpg"
         }
       }

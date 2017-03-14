@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Daybreak Metal Fest</title>
+    <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
       <div class="fullscreen">
         <div id="hero">
-          <div id="countdown"></div>
-          <h1>Daybreak</h1>
-          <h2>Metal Fest</h2>
-          <nav>
-            <a>Hi</a>
-          </nav>
+          <div class="countdown">
+            <span id="timer"></span>
+            <span>days to go</span>
+          </div>
+          <h1 class="title">daybreak</h1>
+          <h2 class="subtitle">metal fest</h2>
         </div>
       </div>
     </header>
@@ -34,17 +35,31 @@
         </div>
       </div>
       <!-- Modal End -->
+      <section class="social">
+        <h3>Join the facebook event for the latest updates</h3>
+      </section>
       <section class="lineup">
-        <!-- <div id="countlessskies" class="band">
-          <img src="img/cs-logo.png" title="Countless Skies logo" />
-          <p>Countless Skies</p>
-          <p class="genre">Melodic Death Metal</p>
-        </div> -->
+        <div id="lineup" class="container">
+          <!-- Band divs generated here -->
+        </div>
       </section> <!-- Lineup End -->
       <section class="info">
-        <p>A festival in Luton</p>
-        <p>Location</p>
-        <p>Parking</p>
+        <div class="container">
+          <div class="col">
+            <p>Daybreak Metal Fest is an all-day festival hosted at The Castle Tavern in the heart of Luton. With nine UK bands from near and far, the lineup will cater to anyone with a taste for the extreme.</p><br>
+            <!-- <p>The Castle Tavern, a traditional pub serving real ale on tap, </p> -->
+            <p>Getting Here</p>
+            <p>By Car</p>
+            <p>Free parking is available at ...... and ..... from .... blah blah</p>
+            <p>By Train</p>
+            <p>The venue is an 8 minute walk from Luton train station. Trains run regularly, heading north to Bedford and south to London.<br><a href="https://www.thetrainline.com/train-times/" target="_blank">Check train times</a></p>
+            <p>By Bus</p>
+            <p>Something about buses</p>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.081836994369!2d-0.4166951841210566!3d51.877718691379926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764843821f5857%3A0xa77715c09fe3e03b!2sThe+Castle+Tavern!5e0!3m2!1sen!2suk!4v1489499555921" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
       </section> <!-- Info End -->
     </main>
     <footer>

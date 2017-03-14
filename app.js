@@ -17,7 +17,8 @@ $(function(){
           var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-          $('#countdown').html(days + ' days, ' + hours + ' hours, ' + minutes + ' minutes and ' + seconds + ' seconds');
+          $('#timer').html(days);
+          //, ' + hours + ' hours, ' + minutes + ' minutes and ' + seconds + ' seconds'
         });
 
         // Full Screen Hero
@@ -60,7 +61,7 @@ $(function(){
         var count = Object.keys(this.bands).length;
         for (i = 0; i < count; i++) {
           console.log(count);
-          $('.lineup').append("<div id='" + i + "' class='band'>"
+          $('#lineup').append("<div data-id='" + i + "' class='band'>"
           + "<div class='logo'><img src='img/" + this.bands[i].img + "' /></div>"
           + "<div class='band-info'>"
           + "<h1 class='band-name'>" + this.bands[i].name + "</h1>"
@@ -76,7 +77,7 @@ $(function(){
         var $close = $('.close')
 
         $btn.on('click', function() {
-          var id = $(this).attr('id');
+          var id = $(this).attr('data-id');
           $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
           //console.log('ID = ' + id);
           $('#modal-name').text(App.bands[id].name);

@@ -56,6 +56,17 @@ $(function(){
           }
         });
 
+        // Display content from bands object
+        var count = Object.keys(this.bands).length;
+        for (i = 0; i < count; i++) {
+          console.log(count);
+          $('.lineup').append("<div id='" + i + "' class='band'>"
+          + "<img src='img/" + this.bands[i].img + "' />"
+          + "<h1>" + this.bands[i].name + "</h1>"
+          + "<p>" + this.bands[i].genre + "</p>"
+          + "</div>");
+        }
+
         // Modal
 
         var $modal = $('#modal');
@@ -63,6 +74,11 @@ $(function(){
         var $close = $('.close')
 
         $btn.on('click', function() {
+          var id = $(this).attr('id');
+          $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
+          console.log('ID = ' + id);
+          $('#modal-name').text(App.bands[id].name);
+          $('#modal-genre').text(App.bands[id].genre);
           $modal.slideToggle();
         });
 
@@ -70,11 +86,44 @@ $(function(){
           $modal.slideToggle();
         });
 
+
         // $(window).on('click', function(e) {
         //   if ($(e.target) == $modal) {
         //
         //   }
         // });
+      },
+      bands: {
+        "0": {
+          "id": "1",
+          "name": "Countless Skies",
+          "genre": "Melodic Death Metal",
+          "img": "cs-logo.png",
+          "bio": "Test Bio",
+          "music": "//countlessskies.com",
+          "fb": "//facebook.com/countlessskies",
+          "photo": "cs-promo.jpg"
+        },
+        "1": {
+          "id": "2",
+          "name": "King Leviathan",
+          "genre": "Blackened Thrash Metal",
+          "img": "kl-logo.png",
+          "bio": "Test Bio",
+          "music": "//countlessskies.com",
+          "fb": "//facebook.com/countlessskies",
+          "photo": "kl-promo.jpg"
+        },
+        "2": {
+          "id": "3",
+          "name": "Isarnos",
+          "genre": "Folk Metal",
+          "img": "is-logo.png",
+          "bio": "Test Bio",
+          "music": "//countlessskies.com",
+          "fb": "//facebook.com/countlessskies",
+          "photo": "is-promo.jpg"
+        }
       }
     };
 

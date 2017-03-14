@@ -83,6 +83,7 @@ $(function(){
           $('#modal-music').attr('href', App.bands[id].music);
           $('#modal-bio').html(App.bands[id].bio);
           $modal.slideToggle();
+          $modal.css('display', 'flex');
         });
 
         $close.on('click', function() {
@@ -98,7 +99,6 @@ $(function(){
       },
       bands: {
         "0": {
-          "id": "1",
           "name": "Countless Skies",
           "genre": "Melodic Death Metal",
           "img": "cs-logo.png",
@@ -108,7 +108,6 @@ $(function(){
           "photo": "cs-promo.jpg"
         },
         "1": {
-          "id": "2",
           "name": "King Leviathan",
           "genre": "Blackened Thrash Metal",
           "img": "kl-logo.png",
@@ -123,7 +122,15 @@ $(function(){
           "photo": "kl-promo.jpg"
         },
         "2": {
-          "id": "3",
+          "name": "Isarnos",
+          "genre": "Folk Metal",
+          "img": "is-logo.png",
+          "bio": "Isarnos Bio",
+          "music": "#",
+          "fb": "//facebook.com/Isarnos",
+          "photo": "is-promo.jpg"
+        },
+        "3": {
           "name": "Isarnos",
           "genre": "Folk Metal",
           "img": "is-logo.png",

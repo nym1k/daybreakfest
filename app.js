@@ -62,7 +62,7 @@ $(function(){
           console.log(count);
           $('.lineup').append("<div id='" + i + "' class='band'>"
           + "<div class='logo'><img src='img/" + this.bands[i].img + "' /></div>"
-          + "<div class='info'>"
+          + "<div class='band-info'>"
           + "<h1 class='band-name'>" + this.bands[i].name + "</h1>"
           + "<p class='band-genre'>" + this.bands[i].genre + "</p>"
           + "</div>"

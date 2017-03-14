@@ -65,6 +65,7 @@ $(function(){
           + "<div class='logo'><img src='img/" + this.bands[i].img + "' /></div>"
           + "<div class='band-info'>"
           + "<h1 class='band-name'>" + this.bands[i].name + "</h1>"
+          + "<span class='divider'></span>"
           + "<p class='band-genre'>" + this.bands[i].genre + "</p>"
           + "</div>"
           + "</div>");
@@ -84,7 +85,7 @@ $(function(){
           $('#modal-genre').text(App.bands[id].genre);
           $('#modal-fb').attr('href', App.bands[id].fb);
           $('#modal-music').attr('href', App.bands[id].music);
-          $('#modal-bio').html(App.bands[id].bio);
+          $('.modal-bio').html(App.bands[id].bio);
           $modal.slideToggle();
           $modal.css('display', 'flex');
         });
@@ -103,7 +104,7 @@ $(function(){
       bands: {
         "0": {
           "name": "Countless Skies",
-          "genre": "Melodic Death Metal",
+          "genre": "melodic death metal",
           "img": "cs-logo.png",
           "bio": "Test Bio",
           "music": "//countlessskies.com",
@@ -112,7 +113,7 @@ $(function(){
         },
         "1": {
           "name": "King Leviathan",
-          "genre": "Blackened Thrash Metal",
+          "genre": "blackened thrash metal",
           "img": "kl-logo.png",
           "bio": ["<p>King Leviathan are a four piece Blackened Thrash band from Brighton.</p><br>",
                   "<p>Devout worshipers of Speed, Violence and The Occult, King Leviathan have spread their psalms from their inception, and in only a few years of existence the cult has spread across the country.</p><br>",
@@ -126,7 +127,7 @@ $(function(){
         },
         "2": {
           "name": "Isarnos",
-          "genre": "Folk Metal",
+          "genre": "folk metal",
           "img": "is-logo.png",
           "bio": "Isarnos Bio",
           "music": "#",
@@ -135,7 +136,7 @@ $(function(){
         },
         "3": {
           "name": "Dorylus",
-          "genre": "Melodic Death Metal",
+          "genre": "melodic death metal",
           "img": "do-logo.png",
           "bio": "Dorylus Bio",
           "music": "#",
@@ -144,7 +145,7 @@ $(function(){
         },
         "4": {
           "name": "Cerberus Unchained",
-          "genre": "Melodic Death Metal",
+          "genre": "melodic death metal",
           "img": "cu-logo.png",
           "bio": "Cerberus Unchained Bio",
           "music": "#",
@@ -153,7 +154,7 @@ $(function(){
         },
         "5": {
           "name": "Atorc",
-          "genre": "Folk Metal",
+          "genre": "folk metal",
           "img": "at-logo.png",
           "bio": "Atorc Bio",
           "music": "#",
@@ -162,7 +163,7 @@ $(function(){
         },
         "6": {
           "name": "With A Vengeance",
-          "genre": "Melodic Metalcore",
+          "genre": "melodic metalcore",
           "img": "wav-logo.png",
           "bio": "WaV Bio",
           "music": "#",
@@ -171,7 +172,7 @@ $(function(){
         },
         "7": {
           "name": "Draugr",
-          "genre": "Melodic Death Metal",
+          "genre": "melodic death metal",
           "img": "dr-logo.png",
           "bio": "Draugr Bio",
           "music": "#",
@@ -180,7 +181,7 @@ $(function(){
         },
         "8": {
           "name": "Conform To Serve",
-          "genre": "Death Metal",
+          "genre": "death metal",
           "img": "cts-logo.png",
           "bio": "Confirm To Serve Bio",
           "music": "#",

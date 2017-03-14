@@ -72,6 +72,7 @@ main {
 }
 
 .social {
+  background: #BDBDBD;
   color: #333;
 }
 
@@ -94,10 +95,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: rgba(0,0,0,0.4);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  padding: 2%;
 }
 
 .band-info {
@@ -136,20 +138,24 @@ main {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+
+.modal-bio {
+  flex-grow: 1;
   overflow-y: scroll;
 }
 
 .close {
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 10px;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #BDBDBD;
   text-decoration: none;
   cursor: pointer;
 }
@@ -190,7 +196,21 @@ main {
   .band-info {
     height: 100%;
     background: rgba(0,0,0,0);
-    font-size: 2em;
+  }
+
+  .band-name {
+    font-size: 3em;
+  }
+
+  .divider {
+    height: 3px;
+    width: 80%;
+    background: #BDBDDB;
+    margin: 10px 0;
+  }
+
+  .band-genre {
+    font-size: 1.5em;
   }
 
   .band-info > * {

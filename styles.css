@@ -174,14 +174,43 @@ main {
     margin: 5% auto;
   }
 
+  .band,
+  .band img,
+  .band-info,
+  .band-info > * {
+    transition: all .5s ease;
+  }
+
   .band {
     flex: 1 1 425px;
     margin: 0;
     margin-bottom: 5%;
   }
 
+  .band-info {
+    height: 100%;
+    background: rgba(0,0,0,0);
+    font-size: 2em;
+  }
+
+  .band-info > * {
+    opacity: 0;
+    /*color: #333;*/
+  }
+
+  .band:hover img{
+    filter: blur(10px);
+  }
+
+  .band:hover .band-info {
+    background: rgba(51,51,51,0.8);
+  }
+
+  .band:hover .band-info > * {
+    opacity: 1;
+  }
+
   .band:nth-child(2n+3) {
-    background: green;
     margin-left: 5%;
   }
 }

@@ -131,13 +131,58 @@ $(function(){
           "photo": "is-promo.jpg"
         },
         "3": {
-          "name": "Isarnos",
-          "genre": "Folk Metal",
-          "img": "is-logo.png",
-          "bio": "Isarnos Bio",
+          "name": "Dorylus",
+          "genre": "Melodic Death Metal",
+          "img": "do-logo.png",
+          "bio": "Dorylus Bio",
           "music": "#",
-          "fb": "//facebook.com/Isarnos",
-          "photo": "is-promo.jpg"
+          "fb": "//facebook.com/dorylusband",
+          "photo": "do-promo.jpg"
+        },
+        "4": {
+          "name": "Cerberus Unchained",
+          "genre": "Melodic Death Metal",
+          "img": "cu-logo.png",
+          "bio": "Cerberus Unchained Bio",
+          "music": "#",
+          "fb": "//facebook.com/cerberusunchained",
+          "photo": "cu-promo.jpg"
+        },
+        "5": {
+          "name": "Atorc",
+          "genre": "Folk Metal",
+          "img": "at-logo.png",
+          "bio": "Atorc Bio",
+          "music": "#",
+          "fb": "//facebook.com/atorcofficial",
+          "photo": "at-promo.jpg"
+        },
+        "6": {
+          "name": "With A Vengeance",
+          "genre": "Melodic Metalcore",
+          "img": "wav-logo.png",
+          "bio": "WaV Bio",
+          "music": "#",
+          "fb": "//facebook.com/withavengeance",
+          "photo": "wav-promo.jpg"
+        },
+        "7": {
+          "name": "Draugr",
+          "genre": "Melodic Death Metal",
+          "img": "dr-logo.png",
+          "bio": "Draugr Bio",
+          "music": "#",
+          "fb": "//facebook.com/draugrband",
+          "photo": "dr-promo.jpg"
+        },
+        "8": {
+          "name": "Conform To Serve",
+          "genre": "Death Metal",
+          "img": "cts-logo.png",
+          "bio": "Confirm To Serve Bio",
+          "music": "#",
+          "fb": "//facebook.com/conformtoserve",
+          "photo": "cts-promo.jpg"
         }
       }
     };

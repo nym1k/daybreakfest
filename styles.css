@@ -144,7 +144,7 @@ main {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 10;
+  z-index: 200;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -192,7 +192,20 @@ main {
 }
 
 .info {
-  background: #333;
+  background: #7F4E85;
+}
+
+.travel {
+  padding: 2% 0;
+}
+
+.col,
+.map {
+  padding: 2%;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 footer {
@@ -206,11 +219,7 @@ footer > a {
 
 /* Media queries*/
 
-@media screen and (min-width: 992px) {
-
-  .title {
-    font-size: 8rem;
-  }
+@media screen and (min-width: 768px) {
 
   .lineup .container {
     display: flex;
@@ -218,11 +227,49 @@ footer > a {
     padding: 0 5%;
   }
 
+  .band {
+    flex: 1 0 240px;
+    margin: 0;
+    margin-bottom: 5%;
+  }
+
+  .band:nth-child(2n+3) {
+    margin-left: 5%;
+  }
+
+  .title {
+    font-size: 8rem;
+  }
+
   div[data-id="0"] {
     max-width: 100%;
     width: 100%;
     flex: 1 1 900px;
     margin: 5% auto;
+  }
+
+  .travel {
+    display: flex;
+    align-items: center;
+  }
+
+  .col {
+    width: 50%;
+    margin-left: auto;
+  }
+
+}
+
+@media screen and (min-width: 860px) {
+  .band {
+    flex: 1 0 340px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+
+  .lineup .container {
+    max-width: 1280px;
   }
 
   .band,
@@ -233,9 +280,7 @@ footer > a {
   }
 
   .band {
-    flex: 1 1 425px;
-    margin: 0;
-    margin-bottom: 5%;
+    flex-basis: 415px;
     border: 1px solid #fff;
   }
 
@@ -248,9 +293,9 @@ footer > a {
     font-size: 3em;
   }
 
-  .divider {
-    height: 3px;
+  .band:hover .divider {
     width: 80%;
+    height: 3px;
     background: #BDBDDB;
     margin: 10px 0;
   }
@@ -275,9 +320,5 @@ footer > a {
 
   .band:hover .band-info > * {
     opacity: 1;
-  }
-
-  .band:nth-child(2n+3) {
-    margin-left: 5%;
   }
 }

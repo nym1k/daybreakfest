@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Daybreak Metal Fest</title>
     <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header>
@@ -15,11 +15,13 @@
       <div class="fullscreen">
         <div id="hero">
           <p>luton live/s and countless skies presents:</p>
-          <h1 class="title">daybreak</h1>
-          <h2 class="subtitle">metal fest</h2>
+          <div class="dblogo">
+            <img class="img" src="img/dblogo.png" alt="Daybreak Metal Fest 2017" />
+          </div>
           <p>april 1st 2017</p>
           <p>doors at 3:30pm | free entry</p>
         </div>
+        <img src="img/down.svg" id="down-arrow" class="arrow" alt="Down Arrow" />
       </div>
     </header>
     <main>
@@ -27,7 +29,7 @@
       <div id="modal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content">
-          <div id="modal-photo">
+          <div id="modal-photo" class="modal-photo">
             <img class="img" />
           </div>
           <div class="modal-info">
@@ -40,8 +42,8 @@
         </div>
       </div>
       <!-- Modal End -->
-      <section class="social">
-        <h3>Join the facebook event for the latest updates</h3>
+      <section id="social" class="social">
+        <h3><a href="#" title="Daybreak Facebook Event Page">Join the facebook event for the latest updates</a></h3>
       </section>
       <section class="lineup">
         <div id="lineup" class="container">

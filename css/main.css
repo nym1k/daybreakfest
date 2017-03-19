@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: #FFF; }
+
+.img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2% 5%; }
+
+body {
+  font-family: 'Marcellus SC', serif;
+  color: #fff;
+  text-align: center; }
+
+main {
+  width: 100%; }
+
+iframe {
+  max-width: 100%; }
+
+footer {
+  padding: 2% 0;
+  background: #BDBDBD; }
+
+footer > a {
+  color: #333; }
+
+.logo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.countdown {
+  position: absolute;
+  top: 45px;
+  left: -92px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #7F4E85;
+  font-weight: bold;
+  font-size: 2em;
+  width: 350px;
+  z-index: 100;
+  padding: 10px 0;
+  transform: rotate(-45deg); }
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.dblogo {
+  max-width: 75%;
+  margin: 5% auto; }
+
+.arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 48%;
+  cursor: pointer; }
+
+.social {
+  background: #BDBDBD;
+  color: #333; }
+
+.lineup {
+  background: #333;
+  /*background: #7F4E85;*/ }
+
+.band {
+  width: 100%;
+  height: 250px;
+  margin: 5% auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  /*background: rgba(0,0,0,0.4);*/
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 2%; }
+
+.band-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(127, 78, 133, 0.7);
+  /*background: rgba(125,125,125,0.7);*/ }
+
+@media screen and (min-width: 768px) {
+  .lineup .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%; }
+
+  .band {
+    flex: 1 0 240px;
+    margin: 0;
+    margin-bottom: 5%; }
+
+  .band:nth-child(2n+3) {
+    margin-left: 5%; }
+
+  div[data-id="0"] {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 900px;
+    margin: 5% auto; } }
+@media screen and (min-width: 860px) {
+  .band {
+    flex: 1 0 340px; } }
+@media screen and (min-width: 1025px) {
+  .lineup .container {
+    max-width: 1280px; }
+
+  .band,
+  .band img,
+  .band-info,
+  .band-info > * {
+    transition: all .5s ease; }
+
+  .band {
+    flex-basis: 415px;
+    border: 1px solid #fff; }
+
+  .band-info {
+    height: 100%;
+    background: transparent; }
+
+  .band-name {
+    font-size: 3em; }
+
+  .band:hover .divider {
+    width: 80%;
+    height: 3px;
+    background: #BDBDDB;
+    margin: 10px 0; }
+
+  .band-genre {
+    font-size: 1.5em; }
+
+  .band-info > * {
+    opacity: 0;
+    /*color: #333;*/ }
+
+  .band:hover img {
+    filter: blur(10px); }
+
+  .band:hover .band-info {
+    background: rgba(127, 78, 133, 0.7);
+    /*background: rgba(51,51,51,0.8);*/ }
+
+  .band:hover .band-info > * {
+    opacity: 1; } }
+.modal {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2%; }
+
+.modal-content {
+  background: #333;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; }
+
+.modal-photo {
+  max-height: 200px;
+  flex: 1 1 200px; }
+
+.modal-info {
+  flex: 0 0 200px; }
+
+.modal-bio {
+  flex: 1 1 300px;
+  overflow-y: scroll;
+  max-height: 250px; }
+
+.close {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 4em;
+  font-weight: bold; }
+  .close:hover, .close:focus {
+    color: #BDBDBD;
+    text-decoration: none;
+    cursor: pointer; }
+
+.info {
+  background: #7F4E85; }
+
+.travel {
+  padding: 2% 0; }
+  @media screen and (min-width: 768px) {
+    .travel {
+      display: flex;
+      align-items: center; } }
+
+.col,
+.map {
+  padding: 2%; }
+
+@media screen and (min-width: 768px) {
+  .col {
+    width: 50%;
+    margin-left: auto; } }
+
+/*# sourceMappingURL=main.css.map */

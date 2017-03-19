@@ -29,20 +29,27 @@ $(function(){
           $('.fullscreen').css('height', height);
         }
 
-        // Smooth Scroll
-        $('a[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              var menuHeight = $('.nav').height();
-              $('html, body').animate({
-                scrollTop: target.offset().top - menuHeight
-              }, 1000);
-              return false;
-            }
-          }
+        // Smooth Scroll Down Arrow
+        $('#down-arrow').on('click', function() {
+          $('html,body').animate({
+            scrollTop: $("#social").offset().top},
+            'slow');
         });
+
+        // Smooth Scroll
+        // $('a[href*="#"]:not([href="#"])').click(function() {
+        //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        //     var target = $(this.hash);
+        //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        //     if (target.length) {
+        //       var menuHeight = $('.nav').height();
+        //       $('html, body').animate({
+        //         scrollTop: target.offset().top - menuHeight
+        //       }, 1000);
+        //       return false;
+        //     }
+        //   }
+        // });
 
         // Apply Header Style After Hero
         $(window).scroll(function() {
@@ -62,7 +69,7 @@ $(function(){
         for (i = 0; i < count; i++) {
           console.log(count);
           $('#lineup').append("<div data-id='" + i + "' class='band'>"
-          + "<div class='logo'><img class='img' src='img/" + this.bands[i].img + "' /></div>"
+          + "<div class='logo'><img class='img' src='../img/" + this.bands[i].img + "' /></div>"
           + "<div class='band-info'>"
           + "<h1 class='band-name'>" + this.bands[i].name + "</h1>"
           + "<span class='divider'></span>"
@@ -79,7 +86,7 @@ $(function(){
 
         $btn.on('click', function() {
           var id = $(this).attr('data-id');
-          $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
+          $('#modal-photo img').attr('src', '../img/' + App.bands[id].photo);
           //console.log('ID = ' + id);
           $('#modal-name').text(App.bands[id].name);
           $('#modal-genre').text(App.bands[id].genre);

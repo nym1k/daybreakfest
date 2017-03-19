@@ -1,0 +1,25 @@
+.info {
+  background: #7F4E85;
+}
+
+.travel {
+  padding: 2% 0;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.col,
+.map {
+  padding: 2%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .col {
+    width: 50%;
+    margin-left: auto;
+  }
+
+}

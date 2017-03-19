@@ -1,0 +1,20 @@
+{
+  "name": "daybreak",
+  "version": "1.0.0",
+  "description": "A website for a metal festival in the heart of Luton town.",
+  "main": "app.js",
+  "scripts": {
+    "server": "http-server",
+    "watch-sass": "sass --watch ./css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nym1k/daybreakfest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nym1k/daybreakfest/issues"
+  },
+  "homepage": "https://github.com/nym1k/daybreakfest#readme"
+}

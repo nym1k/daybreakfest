@@ -1,0 +1,125 @@
+.lineup {
+  background: #333;
+  /*background: #7F4E85;*/
+}
+
+.band {
+  width: 100%;
+  height: 250px;
+  margin: 5% auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  /*background: rgba(0,0,0,0.4);*/
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 2%;
+}
+
+.band-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(127, 78, 133, 0.7);
+  /*background: rgba(125,125,125,0.7);*/
+}
+
+@media screen and (min-width: 768px) {
+
+  .lineup .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+
+  .band {
+    flex: 1 0 240px;
+    margin: 0;
+    margin-bottom: 5%;
+  }
+
+  .band:nth-child(2n+3) {
+    margin-left: 5%;
+  }
+
+  div[data-id="0"] {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 900px;
+    margin: 5% auto;
+  }
+
+}
+
+@media screen and (min-width: 860px) {
+  .band {
+    flex: 1 0 340px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+
+  .lineup .container {
+    max-width: 1280px;
+  }
+
+  .band,
+  .band img,
+  .band-info,
+  .band-info > * {
+    transition: all .5s ease;
+  }
+
+  .band {
+    flex-basis: 415px;
+    border: 1px solid #fff;
+  }
+
+  .band-info {
+    height: 100%;
+    background: rgba(0,0,0,0);
+  }
+
+  .band-name {
+    font-size: 3em;
+  }
+
+  .band:hover .divider {
+    width: 80%;
+    height: 3px;
+    background: #BDBDDB;
+    margin: 10px 0;
+  }
+
+  .band-genre {
+    font-size: 1.5em;
+  }
+
+  .band-info > * {
+    opacity: 0;
+    /*color: #333;*/
+  }
+
+  .band:hover img{
+    filter: blur(10px);
+  }
+
+  .band:hover .band-info {
+    background: rgba(127, 78, 133, 0.7);
+    /*background: rgba(51,51,51,0.8);*/
+  }
+
+  .band:hover .band-info > * {
+    opacity: 1;
+  }
+}

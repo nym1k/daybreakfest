@@ -1,0 +1,54 @@
+@import 'reset';
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: #FFF;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2% 5%;
+}
+
+body {
+  font-family: 'Marcellus SC', serif;
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+footer {
+  padding: 2% 0;
+  background: #BDBDBD;
+}
+
+footer > a {
+  color: #333;
+}
+
+@import 'header';
+
+// social
+.social {
+  background: #BDBDBD;
+  color: #333;
+}
+
+@import 'lineup';
+@import 'modal';
+@import 'info';

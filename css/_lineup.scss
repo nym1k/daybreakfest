@@ -1,4 +1,12 @@
 .lineup {
+  box-shadow: inset 0 8px 6px -6px black;
+}
+
+.info {
+  box-shadow: 0 -8px 6px -6px black;
+}
+
+.lineup {
   background: #333;
   /*background: #7F4E85;*/
 }

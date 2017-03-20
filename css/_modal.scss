@@ -18,22 +18,46 @@
   background: #333;
   width: 100%;
   height: 100%;
+  @media (min-width: 992px) {
+    max-width: 992px;
+    max-height: 600px;
+  }
   margin: 0 auto;
-}
-
-.modal-photo {
-  max-height: 200px;
-  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .modal-info {
-  flex: 0 0 200px;
+  background: rgba(127, 78, 133, 0.7);
+  h1,
+  p {
+    text-shadow: 0 0 10px #000;
+  }
+}
+
+.modal-photo {
+  width: 100%;
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.modal-links {
+  flex: 0 0 0;
+  margin: auto 0;
+  padding: 2% 0;
 }
 
 .modal-bio {
-  flex: 1 1 300px;
-  overflow-y: scroll;
-  max-height: 250px;
+  flex: 1 0 0;
+  overflow-y: auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  padding: 2% 5%;
 }
 
 .close {

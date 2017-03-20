@@ -86,19 +86,26 @@ $(function(){
 
         $btn.on('click', function() {
           var id = $(this).attr('data-id');
-          $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
-          //console.log('ID = ' + id);
+          // $('#modal-photo img').attr('src', 'img/' + App.bands[id].photo);
+          $('#modal-photo').css({
+            'background' : 'url(img/' + App.bands[id].photo + ') no-repeat center',
+            'background-size' : 'cover'
+          });
           $('#modal-name').text(App.bands[id].name);
           $('#modal-genre').text(App.bands[id].genre);
           $('#modal-fb').attr('href', App.bands[id].fb);
           $('#modal-music').attr('href', App.bands[id].music);
           $('.modal-bio').html(App.bands[id].bio);
-          $modal.slideToggle();
+          $modal.slideDown();
           $modal.css('display', 'flex');
         });
 
         $close.on('click', function() {
-          $modal.slideToggle();
+          $modal.slideUp();
+        });
+
+        $modal.on('click', function(e) {
+          if (e.target === this) $modal.slideUp();
         });
 
 
@@ -113,7 +120,9 @@ $(function(){
           "name": "Countless Skies",
           "genre": "melodic death metal",
           "img": "cs-logo.png",
-          "bio": "Test Bio",
+          "bio": ["<p>COUNTLESS SKIES burst onto the modern metal scene with their debut self-titled EP in late 2014. Blending progressive and darkly intense music influenced by their Scandinavian melodeth heroes, the EP began a flood of shows up and down the UK.</p><br>",
+          "<p>After winning the Bedfordshire 'Metal to the Masses' competition, they secured a slot on the New Blood stage at the UK’s No1 independent metal festival, Bloodstock Open Air 2015. Building upon their rapid momentum, they continue their conquest of the UK to support their debut full-length released last June through Kolony Records.</p><br>",
+          "<p>With a tremendous start, the future looks bright for Countless Skies.</p>"].join(''),
           "music": "//countlessskies.com",
           "fb": "//facebook.com/countlessskies",
           "photo": "cs-promo.jpg"
@@ -136,17 +145,26 @@ $(function(){
           "name": "Isarnos",
           "genre": "folk metal",
           "img": "is-logo.png",
-          "bio": "Isarnos Bio",
-          "music": "#",
+          "bio": ["<p><em>\"Blown away would be an understatement… If you like your Folk Metal to be something out of this world then please check out Isarnos.\" - Metal-rules.com</em></p><br>",
+                  "<p>Listed in Reverb Nation's \"top 10\" of ALL London metal bands, Isarnos have received worldwide exposure, having been featured on radio stations in the UK, Europe and South America, while their Soundcloud Demos have been heard in over 110 countries.</p><br>",
+                  "<p>Having made notable appearances at Warhorns, Bloodstock and Luton's own Castlefest, Isarnos hold their own in even the heavier side of the genre, having performed alongside international Black/Death metal bands including HATE and Noctem in 2016.</p><br>",
+                  "<p><em>\"Never have you seen such crazy instruments put together to create a folk metal bombastic brilliance as we got with with Isarnos… there is always one that goes above and beyond in the weird and wonderful and this year it belonged to Isarnos\" - fakegeeks.co.uk</em></p><br>",
+                  "<p>Isarnos will be making a huge appearance in 2017 in support of Memoriam and Grand Magus, and will host their inaugural invitational show \"The Metal Alliance\" in London in June.</p><br>",
+                  "<p><em>\"These guys have a different sound to most bands even in the folk metal genre... If you get the chance to see these guys live at a venue near you – do it! Consider my eyes well and truly opened.\" - Overdrive.ie</em></p><br>",
+                  "<p>Continuing to re-define the genre - Isarnos stand out in the UK Folk Metal scene by showcasing sheer technical brilliance of all the instrumentalists in the band, demonstrating that Folk Metal is not just a gimmick of painted faces and twee drinking songs, but a credible sub-genre of Metal.<p><br>",
+                  "<p>Make no mistake, Isarnos will hit you hard and heavy.</p>"].join(''),
+          "music": "//soundlcoud.com/isarnos",
           "fb": "//facebook.com/Isarnos",
           "photo": "is-promo.jpg"
         },
         "3": {
           "name": "Dorylus",
-          "genre": "melodic death metal",
+          "genre": "death/thrash metal",
           "img": "do-logo.png",
-          "bio": "Dorylus Bio",
-          "music": "#",
+          "bio": ["<p>4 piece Death/Thrash metal band from Hertfordshire.</p><br>",
+          "<p>Heavily influenced by Slayer, Machine Head, Death, Amon Amarth and lots more.</p><br>",
+          "<p>Since their inception in January 2015 they've released an EP entitled ‘The Rapture’, were finalists in the London M2TM competition 2016, and have also had the honour of playing the Underworld in Camden Town.</p>"].join(''),
+          "music": "//youtube.com/watch?v=59f9jsm9njE",
           "fb": "//facebook.com/dorylusband",
           "photo": "do-promo.jpg"
         },
@@ -154,8 +172,9 @@ $(function(){
           "name": "Cerberus Unchained",
           "genre": "melodic death metal",
           "img": "cu-logo.png",
-          "bio": "Cerberus Unchained Bio",
-          "music": "#",
+          "bio": ["<p>Cerberus Unchained was born out of a joint love for heavy music in all of its guises in 2016.</p><br>",
+          "<p>The band consists of Richard Stevenson torturing a microphone to within an inch of its life, Sam Clarke and Andy Croughan shredding like mad bastards and Simon Marston fingering the bass.</p>"].join(''),
+          "music": "//cerberusunchained.bandcamp.com",
           "fb": "//facebook.com/cerberusunchained",
           "photo": "cu-promo.jpg"
         },
@@ -163,8 +182,11 @@ $(function(){
           "name": "Atorc",
           "genre": "folk metal",
           "img": "at-logo.png",
-          "bio": "Atorc Bio",
-          "music": "#",
+          "bio": ["<p>From the darkest depths of Suffolk, The six Folk Metal Warriors of East Anglia are always ready for raiding and a drinking session. From head-bangin' to toe-tappin' in twenty seconds, they'll be sure to give you a night to remember.</p><br>",
+          "<p>Influenced not only by the folk metal bands of Scandinavia and Mainland Europe, we also are influenced by a lot of Power metal, Thrash metal as well as melodic metal bands too.</p><br>",
+          "<p>Our overall sound' has clean and harsh vocals, roaring guitar riffs, booming bass lines, harmonic keyboards, leg slapping violins, and fist-pounding drum beats.</p><br>",
+          "<p>Put them together and you get the Battle-Hardened Folk Metal Warriors of East Anglia, ready for war!</p>"].join(''),
+          "music": "//youtube.com/channel/UCIxfkWy2qmZ1mpfj2cDHpdg",
           "fb": "//facebook.com/atorcofficial",
           "photo": "at-promo.jpg"
         },
@@ -172,8 +194,11 @@ $(function(){
           "name": "With A Vengeance",
           "genre": "melodic metalcore",
           "img": "wav-logo.png",
-          "bio": "WaV Bio",
-          "music": "#",
+          "bio": ["<p>With A Vengeance are a groove/melodic metal-core band based in and around south London.</p><br>",
+          "<p>Delivering epic thrashy riffs that are rich with an old school vibe, along with an extreme but melodic in your face sound, guaranteed to get your feet tapping or head banging!</p><br>",
+          "<p>The band consists of Harrison Rickelsford on vocals, Max Din on 1st guitar, Samuel Fowler on bass, Jay Clark on 2nd guitar and finally Samuel Walton on drums.</p><br>",
+          "Check out their latest E.P 'Ouroboros' to get a taste of what's to come!</p>"].join(''),
+          "music": "//youtu.be/5fYOJIR5PHQ",
           "fb": "//facebook.com/withavengeance",
           "photo": "wav-promo.jpg"
         },
@@ -181,17 +206,20 @@ $(function(){
           "name": "Draugr",
           "genre": "melodic death metal",
           "img": "dr-logo.png",
-          "bio": "Draugr Bio",
-          "music": "#",
+          "bio": ["<p>Draugr are a melodic blackened death metal band from Hertfordshire with a sound similar to that of the Scandinavian metal scene. There is a variety of styles incorporated within the music making it fast, epic, and powerful with a dark theatrical element and English and Finnish lyrics.</p><br>",
+          "<p>A five piece band with many different influences, Draugr’s sound is best compared to Children of Bodom, Kalmah, Omnium gatherum, Wintersun, and Eternal Tears of Sorrow.</p>"].join(''),
+          "music": "//draugr.bandcamp.com",
           "fb": "//facebook.com/draugrband",
           "photo": "dr-promo.jpg"
         },
         "8": {
           "name": "Conform To Serve",
-          "genre": "death metal",
+          "genre": "blackened death metal",
           "img": "cts-logo.png",
-          "bio": "Confirm To Serve Bio",
-          "music": "#",
+          "bio": ["<p>Formed in 2015, Conform to Serve have made their mark on the local metal scene with crushing riffs and blistering solos.</p><br>",
+          "<p>Their debut EP 'Industrialised Worship', self written/recorded/produced by Pete Harris, was released on September 5th 2016.</p><br>",
+          "<p>The band are working on a new album, crafting thier extreme blend of death/black metal in time for a 2017 release!</p>"].join(''),
+          "music": "//conformtoserve.bandcamp.com",
           "fb": "//facebook.com/conformtoserve",
           "photo": "cts-promo.jpg"
         }

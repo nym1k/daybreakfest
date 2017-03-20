@@ -33,8 +33,8 @@ iframe {
 }
 
 footer {
-  padding: 2% 0;
-  background: #BDBDBD;
+  padding: 1% 0;
+  background: #333;
 }
 
 footer > a {
@@ -46,7 +46,10 @@ footer > a {
 // social
 .social {
   background: #BDBDBD;
-  color: #333;
+  padding: 1% 0;
+  a {
+    color: #333;
+  }
 }
 
 @import 'lineup';

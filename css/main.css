@@ -37,7 +37,7 @@ footer > a {
 
 .countdown {
   position: absolute;
-  top: 30px;
+  top: 10px;
   left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.4);

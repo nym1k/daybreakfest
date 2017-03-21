@@ -8,7 +8,6 @@
 
 .lineup {
   background: #333;
-  /*background: #7F4E85;*/
 }
 
 .band {
@@ -21,11 +20,11 @@
   justify-content: center;
   align-items: center;
   background: none;
-  /*background: rgba(0,0,0,0.4);*/
   position: relative;
   overflow: hidden;
   cursor: pointer;
   padding: 2%;
+  border: 1px solid #FFF;
 }
 
 .band-info {
@@ -39,7 +38,17 @@
   justify-content: center;
   align-items: center;
   background: rgba(127, 78, 133, 0.7);
-  /*background: rgba(125,125,125,0.7);*/
+  @media screen and (max-width: 1024px) {
+    border-top: 1px solid #FFF;
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {

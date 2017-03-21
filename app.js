@@ -98,14 +98,17 @@ $(function(){
           $('.modal-bio').html(App.bands[id].bio);
           $modal.slideDown();
           $modal.css('display', 'flex');
+          $("body").css('overflow', 'hidden');
         });
 
         $close.on('click', function() {
           $modal.slideUp();
+          $("body").css('overflow', 'auto');
         });
 
         $modal.on('click', function(e) {
           if (e.target === this) $modal.slideUp();
+          $("body").css('overflow', 'auto');
         });
 
 

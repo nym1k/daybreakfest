@@ -50,8 +50,8 @@ footer > a {
     .countdown {
       transform: rotate(-45deg);
       width: 350px;
-      top: 45px;
-      left: -92px; } }
+      top: 60px;
+      left: -82px; } }
 
 #hero {
   display: flex;

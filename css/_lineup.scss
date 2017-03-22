@@ -1,13 +1,7 @@
 .lineup {
   box-shadow: inset 0 8px 6px -6px black;
-}
-
-.info {
-  box-shadow: 0 -8px 6px -6px black;
-}
-
-.lineup {
   background: #333;
+  padding: 1% 0;
 }
 
 .band {
@@ -61,19 +55,22 @@
 
   .band {
     flex: 1 0 240px;
-    margin: 0;
-    margin-bottom: 5%;
+    margin:2.5% 0;
   }
 
   .band:nth-child(2n+3) {
     margin-left: 5%;
   }
 
+  // .band:nth-last-child(-n+2) {
+  //   margin-bottom: 2%;
+  // }
+
   div[data-id="0"] {
     max-width: 100%;
     width: 100%;
     flex: 1 1 900px;
-    margin: 5% auto;
+    margin: 2.5% auto;
   }
 
 }

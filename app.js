@@ -67,7 +67,6 @@ $(function(){
         // Display content from bands object
         var count = Object.keys(this.bands).length;
         for (i = 0; i < count; i++) {
-          console.log(count);
           $('#lineup').append("<div data-id='" + i + "' class='band'>"
           + "<div class='logo'><img class='img' src='img/" + this.bands[i].img + "' /></div>"
           + "<div class='band-info'>"
@@ -98,17 +97,27 @@ $(function(){
           $('.modal-bio').html(App.bands[id].bio);
           $modal.slideDown();
           $modal.css('display', 'flex');
-          $("body").css('overflow', 'hidden');
+          $("html").css({
+            'overflow' : 'hidden',
+            'position' : 'relative',
+            'height' : '100%'
+          });
         });
 
         $close.on('click', function() {
           $modal.slideUp();
-          $("body").css('overflow', 'auto');
+          $("html").css({
+            'overflow' : 'auto',
+            'position' : 'static'
+          });
         });
 
         $modal.on('click', function(e) {
           if (e.target === this) $modal.slideUp();
-          $("body").css('overflow', 'auto');
+          $("html").css({
+            'overflow' : 'auto',
+            'position' : 'static'
+          });
         });
 
 
@@ -134,8 +143,7 @@ $(function(){
           "name": "King Leviathan",
           "genre": "blackened thrash metal",
           "img": "kl-logo.png",
-          "bio": ["<p>King Leviathan are a four piece Blackened Thrash band from Brighton.</p><br>",
-                  "<p>Devout worshipers of Speed, Violence and The Occult, King Leviathan have spread their psalms from their inception, and in only a few years of existence the cult has spread across the country.</p><br>",
+          "bio": ["<p>Devout worshipers of Speed, Violence and The Occult, King Leviathan have spread their psalms from their inception, and in only a few years of existence the cult has spread across the country.</p><br>",
                   "<p>Since the cults formation 2014, their Black Masses in dedication to the Old Gods have been performed at Mammothfest 2014, 2015 and 2016, the New Blood Stage at Bloodstock 2015, Thrashersaurus Norwich 2016, Frankfest 2016 and The Night Before Uprising 2016 supporting Venom Inc., Onslaught, Savage Messiah, Mask Of Judas, Ingested, One Machine, Reign Of Fury, Martyr Defiled and Cambion as well as tours across the UK supporting Spartan, Abhorrent Decimation, Wretched Soul, Oakhaart, Meta-Stasis, Vulgate and Stone Circle.</p><br>",
                   "<p>As the cult begins to enter their third year, the hands of the Old Gods weave the final preparations for King Leviathan's debut album release in 2017 - the follow up to 'The Shrine' and their Self-Titled EP – and the stars begin to wither, as the darkness begins to grow.</p><br>",
                   "<p>Will you join us in worship?</p><br>",

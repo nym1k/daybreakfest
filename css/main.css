@@ -17,12 +17,16 @@ a:visited {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2% 5%; }
+  padding: 0 5%; }
 
 body {
   font-family: 'Marcellus SC', serif;
   color: #fff;
   text-align: center; }
+
+.wrap {
+  width: 100%;
+  height: 100%; }
 
 main {
   width: 100%; }
@@ -58,7 +62,7 @@ footer > a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -87,19 +91,16 @@ footer > a {
 
 .social {
   background: #BDBDBD;
-  padding: 1% 0;
+  padding: 2% 2%;
+  font-size: 1.3em;
   color: #333; }
   .social a {
     color: #333; }
 
 .lineup {
-  box-shadow: inset 0 8px 6px -6px black; }
-
-.info {
-  box-shadow: 0 -8px 6px -6px black; }
-
-.lineup {
-  background: #333; }
+  box-shadow: inset 0 8px 6px -6px black;
+  background: #333;
+  padding: 1% 0; }
 
 .band {
   width: 100%;
@@ -147,8 +148,7 @@ footer > a {
 
   .band {
     flex: 1 0 240px;
-    margin: 0;
-    margin-bottom: 5%; }
+    margin: 2.5% 0; }
 
   .band:nth-child(2n+3) {
     margin-left: 5%; }
@@ -157,7 +157,7 @@ footer > a {
     max-width: 100%;
     width: 100%;
     flex: 1 1 900px;
-    margin: 5% auto; } }
+    margin: 2.5% auto; } }
 @media screen and (min-width: 860px) {
   .band {
     flex: 1 0 340px; } }
@@ -286,14 +286,14 @@ footer > a {
     cursor: pointer; }
 
 .info {
-  background: #7F4E85; }
+  background: #7F4E85;
+  padding: 2% 0;
+  box-shadow: 0 -8px 6px -6px black; }
 
-.col {
-  padding: 2% 0; }
-  @media screen and (min-width: 768px) {
-    .col {
-      display: flex;
-      justify-content: space-around; } }
+@media screen and (min-width: 768px) {
+  .col {
+    display: flex;
+    justify-content: space-around; } }
 
 .transport {
   margin: 2.5% 0;
@@ -317,9 +317,11 @@ footer > a {
 iframe {
   width: 100%; }
 
-.fest-info,
 .col,
 .map {
   margin: 1% 0; }
+
+.col {
+  margin-bottom: 2%; }
 
 /*# sourceMappingURL=main.css.map */

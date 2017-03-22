@@ -1,19 +1,10 @@
 .info {
   background: #7F4E85;
-}
-
-.travel {
-  // padding: 2% 0;
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   align-items: center;
-  // }
-  // border: 3px solid red;
+  padding: 2% 0;
+  box-shadow: 0 -8px 6px -6px black;
 }
 
 .col {
-
-  padding: 2% 0;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
@@ -46,22 +37,11 @@
 iframe {
   width: 100%;
 }
-
-.fest-info,
 .col,
 .map {
   margin: 1% 0;
 }
 
-// @media screen and (min-width: 768px) {
-//
-//   .col,
-//   .map {
-//     width: 48%;
-//     height: 100%;
-//   }
-//
-//   .col {
-//     margin-left: auto;
-//   }
-// }
+.col {
+  margin-bottom: 2%;
+}

@@ -1,7 +1,17 @@
 .lineup {
-  box-shadow: inset 0 8px 6px -6px black;
-  background: #333;
-  padding: 1% 0;
+  box-shadow: inset 0 8px 6px -6px $black;
+  background: $secondary;
+
+  .container {
+    @include bp-medium {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include bp-large {
+      max-width: 1280px;
+    }
+  }
 }
 
 .band {
@@ -18,7 +28,68 @@
   overflow: hidden;
   cursor: pointer;
   padding: 2%;
-  border: 1px solid #FFF;
+  border: 1px solid $white;
+
+  .logo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include bp-medium {
+    flex: 1 0 240px;
+    margin:2.5% 0;
+
+    &:nth-child(2n+3) {
+      margin-left: 5%;
+    }
+
+    &:first-child {
+      max-width: 100%;
+      width: 100%;
+      flex: 1 1 900px;
+      margin-top: 2.5%;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 2.5%;
+    }
+
+  }
+
+  @include bp-extra-medium {
+    flex: 1 0 340px;
+  }
+
+  @include bp-large {
+    flex: 1 0 415px;
+    border: 1px solid $white;
+
+    * {
+      transition: all .5s ease;
+    }
+
+    &:hover .divider {
+      width: 80%;
+      height: 3px;
+      background: $tertiary;
+      margin: 10px 0;
+    }
+
+    &:hover img{
+      filter: blur(10px);
+    }
+
+    &:hover .band-info {
+      @include background-opacity($primary, 0.7);
+    }
+
+    &:hover .band-info > * {
+      opacity: 1;
+    }
+  }
 }
 
 .band-info {
@@ -31,109 +102,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(127, 78, 133, 0.7);
-  @media screen and (max-width: 1024px) {
-    border-top: 1px solid #FFF;
-  }
-}
+  @include background-opacity($primary, 0.7);
+  border-top: 1px solid $white;
 
-.logo {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-
-  .lineup .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 5%;
-  }
-
-  .band {
-    flex: 1 0 240px;
-    margin:2.5% 0;
-  }
-
-  .band:nth-child(2n+3) {
-    margin-left: 5%;
-  }
-
-  // .band:nth-last-child(-n+2) {
-  //   margin-bottom: 2%;
-  // }
-
-  div[data-id="0"] {
-    max-width: 100%;
-    width: 100%;
-    flex: 1 1 900px;
-    margin: 2.5% auto;
-  }
-
-}
-
-@media screen and (min-width: 860px) {
-  .band {
-    flex: 1 0 340px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-
-  .lineup .container {
-    max-width: 1280px;
-  }
-
-  .band,
-  .band img,
-  .band-info,
-  .band-info > * {
-    transition: all .5s ease;
-  }
-
-  .band {
-    flex-basis: 415px;
-    border: 1px solid #fff;
-  }
-
-  .band-info {
+  @include bp-large {
+    border-top: none;
     height: 100%;
-    background: rgba(0,0,0,0);
-  }
+    @include background-opacity($black, 0);
 
-  .band-name {
-    font-size: 3em;
-  }
+    .band-name {
+      font-size: 3em;
+    }
 
-  .band:hover .divider {
-    width: 80%;
-    height: 3px;
-    background: #BDBDDB;
-    margin: 10px 0;
-  }
+    .band-genre {
+      font-size: 1.5em;
+    }
 
-  .band-genre {
-    font-size: 1.5em;
-  }
-
-  .band-info > * {
-    opacity: 0;
-    /*color: #333;*/
-  }
-
-  .band:hover img{
-    filter: blur(10px);
-  }
-
-  .band:hover .band-info {
-    background: rgba(127, 78, 133, 0.7);
-    /*background: rgba(51,51,51,0.8);*/
-  }
-
-  .band:hover .band-info > * {
-    opacity: 1;
+    & > * {
+      opacity: 0;
+    }
   }
 }

@@ -32,7 +32,7 @@ $(function(){
         // Smooth Scroll Down Arrow
         $('#down-arrow').on('click', function() {
           $('html,body').animate({
-            scrollTop: $("#social").offset().top},
+            scrollTop: $("#info").offset().top},
             'slow');
         });
 

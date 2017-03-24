@@ -8,7 +8,7 @@ a,
 a:hover,
 a:focus,
 a:visited {
-  color: #FFF; }
+  color: white; }
 
 .img {
   max-width: 100%;
@@ -17,11 +17,14 @@ a:visited {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 5%; }
+  padding: 5%; }
+  @media only screen and (min-width: 768px) {
+    .container {
+      padding: 2% 5%; } }
 
 body {
   font-family: 'Marcellus SC', serif;
-  color: #fff;
+  color: white;
   text-align: center; }
 
 .wrap {
@@ -33,10 +36,10 @@ main {
 
 footer {
   padding: 1% 0;
-  background: #333; }
+  background: #333333; }
 
 footer > a {
-  color: #FFF;
+  color: white;
   text-decoration: none; }
 
 .countdown {
@@ -44,13 +47,15 @@ footer > a {
   top: 10px;
   left: 0;
   width: 100%;
+  background: white;
+  /* The Fallback */
   background: rgba(255, 255, 255, 0.4);
-  color: #FFF;
+  color: white;
   font-weight: bold;
   font-size: 2em;
   z-index: 100;
   padding: 10px 0; }
-  @media screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .countdown {
       transform: rotate(-45deg);
       width: 350px;
@@ -69,17 +74,19 @@ footer > a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 0 2%; }
+  #hero .dblogo {
+    width: 75%;
+    max-width: 1024px;
+    margin: 17.5% auto; }
+    @media only screen and (min-width: 768px) {
+      #hero .dblogo {
+        margin: 5% auto; } }
   #hero h3 {
     font-size: 1.8em; }
-
-.dblogo {
-  width: 75%;
-  max-width: 1024px;
-  margin: 17.5% auto; }
-  @media screen and (min-width: 768px) {
-    .dblogo {
-      margin: 5% auto; } }
+    #hero h3:last-child {
+      margin-top: 2%; }
 
 .arrow {
   position: absolute;
@@ -89,18 +96,27 @@ footer > a {
   width: 50px;
   margin-left: -25px; }
 
-.social {
-  background: #BDBDBD;
-  padding: 2% 2%;
+.info {
+  background: #bdbdbd;
+  padding: 5% 0;
   font-size: 1.3em;
-  color: #333; }
-  .social a {
-    color: #333; }
+  color: #333333; }
+  @media only screen and (min-width: 768px) {
+    .info {
+      padding: 2% 0; } }
+  .info a {
+    color: #333333; }
 
 .lineup {
   box-shadow: inset 0 8px 6px -6px black;
-  background: #333;
-  padding: 1% 0; }
+  background: #333333; }
+  @media only screen and (min-width: 768px) {
+    .lineup .container {
+      display: flex;
+      flex-wrap: wrap; } }
+  @media only screen and (min-width: 1025px) {
+    .lineup .container {
+      max-width: 1280px; } }
 
 .band {
   width: 100%;
@@ -116,7 +132,48 @@ footer > a {
   overflow: hidden;
   cursor: pointer;
   padding: 2%;
-  border: 1px solid #FFF; }
+  border: 1px solid white; }
+  .band .logo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  @media only screen and (min-width: 768px) {
+    .band {
+      flex: 1 0 240px;
+      margin: 2.5% 0; }
+      .band:nth-child(2n+3) {
+        margin-left: 5%; }
+      .band:first-child {
+        max-width: 100%;
+        width: 100%;
+        flex: 1 1 900px;
+        margin-top: 2.5%; }
+      .band:nth-last-child(-n+2) {
+        margin-bottom: 2.5%; } }
+  @media only screen and (min-width: 860px) {
+    .band {
+      flex: 1 0 340px; } }
+  @media only screen and (min-width: 1025px) {
+    .band {
+      flex: 1 0 415px;
+      border: 1px solid white; }
+      .band * {
+        transition: all .5s ease; }
+      .band:hover .divider {
+        width: 80%;
+        height: 3px;
+        background: #bdbdbd;
+        margin: 10px 0; }
+      .band:hover img {
+        filter: blur(10px); }
+      .band:hover .band-info {
+        background: #7f4e85;
+        /* The Fallback */
+        background: rgba(127, 78, 133, 0.7); }
+      .band:hover .band-info > * {
+        opacity: 1; } }
 
 .band-info {
   position: absolute;
@@ -128,82 +185,24 @@ footer > a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(127, 78, 133, 0.7); }
-  @media screen and (max-width: 1024px) {
+  background: #7f4e85;
+  /* The Fallback */
+  background: rgba(127, 78, 133, 0.7);
+  border-top: 1px solid white; }
+  @media only screen and (min-width: 1025px) {
     .band-info {
-      border-top: 1px solid #FFF; } }
+      border-top: none;
+      height: 100%;
+      background: black;
+      /* The Fallback */
+      background: transparent; }
+      .band-info .band-name {
+        font-size: 3em; }
+      .band-info .band-genre {
+        font-size: 1.5em; }
+      .band-info > * {
+        opacity: 0; } }
 
-.logo {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-@media screen and (min-width: 768px) {
-  .lineup .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 5%; }
-
-  .band {
-    flex: 1 0 240px;
-    margin: 2.5% 0; }
-
-  .band:nth-child(2n+3) {
-    margin-left: 5%; }
-
-  div[data-id="0"] {
-    max-width: 100%;
-    width: 100%;
-    flex: 1 1 900px;
-    margin: 2.5% auto; } }
-@media screen and (min-width: 860px) {
-  .band {
-    flex: 1 0 340px; } }
-@media screen and (min-width: 1025px) {
-  .lineup .container {
-    max-width: 1280px; }
-
-  .band,
-  .band img,
-  .band-info,
-  .band-info > * {
-    transition: all .5s ease; }
-
-  .band {
-    flex-basis: 415px;
-    border: 1px solid #fff; }
-
-  .band-info {
-    height: 100%;
-    background: transparent; }
-
-  .band-name {
-    font-size: 3em; }
-
-  .band:hover .divider {
-    width: 80%;
-    height: 3px;
-    background: #BDBDDB;
-    margin: 10px 0; }
-
-  .band-genre {
-    font-size: 1.5em; }
-
-  .band-info > * {
-    opacity: 0;
-    /*color: #333;*/ }
-
-  .band:hover img {
-    filter: blur(10px); }
-
-  .band:hover .band-info {
-    background: rgba(127, 78, 133, 0.7);
-    /*background: rgba(51,51,51,0.8);*/ }
-
-  .band:hover .band-info > * {
-    opacity: 1; } }
 .modal {
   display: none;
   flex-direction: column;
@@ -216,112 +215,108 @@ footer > a {
   width: 100%;
   height: 100%;
   background: black;
+  /* The Fallback */
   background: rgba(0, 0, 0, 0.8);
   padding: 2%; }
+  .modal .close {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 4em;
+    font-weight: bold; }
+    .modal .close:hover, .modal .close:focus {
+      color: #bdbdbd;
+      text-decoration: none;
+      cursor: pointer; }
 
 .modal-content {
-  background: #333;
+  background: #333333;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 2%; }
-  @media (min-width: 992px) {
+  padding-bottom: 2%;
+  max-width: 992px; }
+  @media only screen and (min-width: 768px) {
     .modal-content {
-      max-width: 992px;
       max-height: 600px; } }
-
-.modal-info {
-  background: rgba(127, 78, 133, 0.7); }
-  .modal-info h1,
-  .modal-info p {
-    text-shadow: 0 0 10px #000; }
-
-.modal-photo {
-  width: 100%;
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
-
-.modal-links {
-  flex: 0 0 80px;
-  padding: 2% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .modal-links .btn {
-    font-weight: bold;
-    font-size: 1.3em;
-    width: 150px;
-    line-height: 1.5;
-    justify-content: center;
-    padding: 0.150em 0.75em;
-    border-radius: 5px;
-    border: 1px solid #FFF;
-    text-decoration: none;
-    background: rgba(127, 78, 133, 0.4); }
-    .modal-links .btn:hover, .modal-links .btn:focus {
-      transition: background .5s ease;
-      background: rgba(127, 78, 133, 0.9); }
-    .modal-links .btn:first-child {
-      margin-right: 10%; }
-
-.modal-bio {
-  flex: 1 0 0;
-  overflow-y: auto;
-  padding: 0 5%; }
-
-.close {
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  font-size: 4em;
-  font-weight: bold; }
-  .close:hover, .close:focus {
-    color: #BDBDBD;
-    text-decoration: none;
-    cursor: pointer; }
-
-.info {
-  background: #7F4E85;
-  padding: 2% 0;
-  box-shadow: 0 -8px 6px -6px black; }
-
-@media screen and (min-width: 768px) {
-  .col {
+  .modal-content .modal-info {
+    background: #7f4e85;
+    /* The Fallback */
+    background: rgba(127, 78, 133, 0.7); }
+    .modal-content .modal-info h1,
+    .modal-content .modal-info p {
+      text-shadow: 0 0 10px black; }
+  .modal-content .modal-photo {
+    width: 100%;
+    flex: 0 0 250px;
     display: flex;
-    justify-content: space-around; } }
+    flex-direction: column;
+    justify-content: flex-end; }
+  .modal-content .modal-links {
+    flex: 0 0 80px;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .modal-content .modal-links .btn {
+      font-weight: bold;
+      font-size: 1.3em;
+      width: 150px;
+      line-height: 1.5;
+      justify-content: center;
+      padding: 0.150em 0.75em;
+      border-radius: 5px;
+      border: 1px solid white;
+      text-decoration: none;
+      background: #7f4e85;
+      /* The Fallback */
+      background: rgba(127, 78, 133, 0.4); }
+      .modal-content .modal-links .btn:hover, .modal-content .modal-links .btn:focus {
+        transition: background .5s ease;
+        background: #7f4e85;
+        /* The Fallback */
+        background: rgba(127, 78, 133, 0.9); }
+      .modal-content .modal-links .btn:first-child {
+        margin-right: 10%; }
+  .modal-content .modal-bio {
+    flex: 1 0 0;
+    overflow-y: auto;
+    padding: 0 5%; }
 
-.transport {
-  margin: 2.5% 0;
-  background: rgba(51, 51, 51, 0.7);
-  border: 1px solid #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 2%; }
-  .transport h3 {
-    margin-bottom: 1%; }
-  @media screen and (min-width: 768px) {
-    .transport {
-      height: 180px;
-      margin: 0;
-      width: 33%; }
-      .transport:nth-of-type(2) {
-        margin: 0 2.5%; }
-      .transport h3 {
-        margin-bottom: 5%; } }
-
-iframe {
-  width: 100%; }
-
-.col,
-.map {
-  margin: 1% 0; }
-
-.col {
-  margin-bottom: 2%; }
+.travel {
+  background: #7f4e85;
+  box-shadow: 0 -8px 6px -6px black;
+  padding: 1.5% 0; }
+  .travel iframe {
+    width: 100%; }
+  .travel .col {
+    margin-bottom: 5%; }
+    @media only screen and (min-width: 768px) {
+      .travel .col {
+        display: flex;
+        justify-content: space-around; } }
+  .travel .transport {
+    margin: 2.5% 0;
+    background: #333333;
+    /* The Fallback */
+    background: rgba(51, 51, 51, 0.7);
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 2%; }
+    .travel .transport h3 {
+      margin-bottom: 1%; }
+    @media only screen and (min-width: 768px) {
+      .travel .transport {
+        height: 180px;
+        margin: 0;
+        width: 33%; }
+        .travel .transport:nth-of-type(2) {
+          margin: 0 2.5%; }
+        .travel .transport h3 {
+          margin-bottom: 5%; } }
 
 /*# sourceMappingURL=main.css.map */
